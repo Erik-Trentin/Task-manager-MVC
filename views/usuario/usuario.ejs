@@ -1,0 +1,28 @@
+<div class="card mb-3" style="max-width: 540px; margin: 0 auto; border-color:black; border-width: 2px;">
+    <div class="row g-0" style="background-color:lightgray;color:#3498db; ">
+      <div class="col-md-4" id="semImg">
+        <% if (usuario.imagem != '') { %>
+                  <img src="<%- usuario.imagem %>" class="card-img-top" alt="<%- usuario.nome %>">
+              <% } else { %>
+                  <i class="bi-person-circle" style="font-size: 6rem; color:black;"></i>	
+              <% } %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%- usuario.nome %></h5>        
+        </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><%- usuario.email %></li>
+                  
+              </ul>
+              <div class="card-body">
+                  <a href="/usuario/editar/<%- usuario.id_usuario %>" style="color:#3498db;">
+                      <i class="bi bi-pencil-fill mr-3" style="font-size: 1.5rem;"></i> Editar
+                  </a>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="max-width: 540px; margin: auto;">
+      <a class="btn btn-primary" href="/" role="button" style="border-color: black; border-width: 2px;">Voltar</a>
+  </div>
